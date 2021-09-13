@@ -16,25 +16,27 @@
     <body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-            <a class="navbar-brand ml-3" href="{% url 'yumbo-home' %}"><h1>Yumbo</h1></a>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'yumbo-home' %}"><h1>Yumbo</h1></a>
 
-            <button class="navbar-toggler mr-3 ml-auto" type="button" data-toggle="collapse" data-target="#yumboNavbar">
-                <!-- Need to update this icon to a font awesome icon -->
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse ml-3 ml-sm-0 mb-0" id="yumboNavbar">
-                    <form class="search-bar d-flex my-2 my-lg-0 ml-sm-auto">
-                        <input class="form-control mr-2 friendly-input" type="search" placeholder="Search Recipes..." aria-label="Search">
-                        <button class="btn custom-btn friendly-btn" type="submit">Search</button>
-                    </form>
-                    <ul class="navbar-nav mr-3 ml-auto">
-                        <li class="nav-item ml-2">
-                            <a class="nav-link active" href="{% url 'logout' %}">Log Out</a>
-                        </li>
-                    </ul>
-                </div>        
-            </div> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yumboNavbar">
+                    <!-- Need to update this icon to a font awesome icon -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="yumboNavbar">
+                        <form class="search-bar d-flex my-2 my-lg-0 mx-sm-auto">
+                            <input class="form-control friendly-input me-1" type="search" placeholder="Search Recipes..." aria-label="Search">
+                            <button class="btn custom-btn friendly-btn" type="submit">Search</button>
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'logout' %}">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>        
+                </div> 
+            </div>
         </nav>
 
         <div class="container rounded my-3">
@@ -43,9 +45,79 @@
                     <a class="recipe-card-link" href="{% url 'recipe-detail' recipe.pk %}">
                         <div class="col">
                             <div class="card mb-3 recipe-card">
-                                <img src="{{ recipe.image.url }}" class="card-img-top" alt="...">
+                                <img src="img/cheeseburger.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Cheeseburgers</h5>
+                                    <p class="card-text">10 minutes</p>
+                                <!--  <a href="{% url 'recipe-detail' recipe.pk %}" class="btn btn-primary">Go somewhere</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a class="recipe-card-link" href="{% url 'recipe-detail' recipe.pk %}">
+                        <div class="col">
+                            <div class="card mb-3 recipe-card">
+                                <img src="img/slow-cooker-apricot-chicken-4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apricot Chicken</h5>
+                                    <p class="card-text">20 minutes</p>
+                                <!--  <a href="{% url 'recipe-detail' recipe.pk %}" class="btn btn-primary">Go somewhere</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a class="recipe-card-link" href="{% url 'recipe-detail' recipe.pk %}">
+                        <div class="col">
+                            <div class="card mb-3 recipe-card">
+                                <img src="img/thaichickencurry-9.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Thai Coconut Curry</h5>
+                                    <p class="card-text">1 hour</p>
+                                <!--  <a href="{% url 'recipe-detail' recipe.pk %}" class="btn btn-primary">Go somewhere</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a class="recipe-card-link" href="{% url 'recipe-detail' recipe.pk %}">
+                        <div class="col">
+                            <div class="card mb-3 recipe-card">
+                                <img src="img/Mongolian_Beef.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mongolian Beef</h5>
+                                    <p class="card-text">2 hours</p>
+                                <!--  <a href="{% url 'recipe-detail' recipe.pk %}" class="btn btn-primary">Go somewhere</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a class="recipe-card-link" href="{% url 'recipe-detail' recipe.pk %}">
+                        <div class="col">
+                            <div class="card mb-3 recipe-card">
+                                <img src="img/Vegan-Enchiladas.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vegan Enchiladas</h5>
+                                    <p class="card-text">10 minutes</p>
+                                <!--  <a href="{% url 'recipe-detail' recipe.pk %}" class="btn btn-primary">Go somewhere</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a class="recipe-card-link" href="{% url 'recipe-detail' recipe.pk %}">
+                        <div class="col">
+                            <div class="card mb-3 recipe-card">
+                                <img src="img/TeriyakiCauliBowls.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Teriyaki Cauliflower</h5>
                                     <p class="card-text">10 minutes</p>
                                 <!--  <a href="{% url 'recipe-detail' recipe.pk %}" class="btn btn-primary">Go somewhere</a> -->
                                 </div>
