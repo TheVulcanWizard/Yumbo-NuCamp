@@ -31,7 +31,10 @@
                         </form>
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" href="logout.html">Log Out</a>
+                                <a class="nav-link active" href="login.html">Log In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'logout' %}">Register</a>
                             </li>
                         </ul>
                     </div>        
@@ -39,15 +42,15 @@
             </div>
         </nav>
 
-        <div class="container rounded my-3">
-            <div class="row">
-                <div class="col-8 offset-2 container-content rounded px-5 py-3">
-                    <h1>Are you sure you want to delete Cheeseburger?</h1>
-                    <h4>If you change your mind later, you will have to rebuild it from scratch!</h4>
-                    <form method="POST">
-                        <a href="index.html" class="btn custom-btn danger-btn me-1">Yes, Delete This Recipe</button>
-                        <a href="recipe_detail.html" class="btn custom-btn friendly-btn">No, Take Me Back!</a>
-                    </form>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-10 offset-1 col-lg-8 offset-lg-2 p-5 container-content rounded">
+                    <h1 class="announcement">You have been logged out</h1>
+                    <div class="border-top pt-3">
+                        <small class="text-muted">
+                            <a href="login.html">Log In Again</a>
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
