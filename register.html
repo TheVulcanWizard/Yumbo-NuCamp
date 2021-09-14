@@ -42,13 +42,45 @@
             </div>
         </nav>
 
-        <div class="container">
-            <div class="row mt-4">
-                <div class="col-10 offset-1 col-lg-8 offset-lg-2 p-5 container-content rounded">
-                    <h1 class="announcement">You have been logged out</h1>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-3 container-content rounded px-5 py-3">
+                    <form method="POST">
+                        <fieldset class="form-group row">
+                            <legend class="border-bottom mb-4 pb-1">Join Today!</legend>
+                            <div class="col">
+                                <label for="id_username">Username:</label>
+                                <input type="text" name="username" class="form-control friendly-input" placeholder="Username" maxlength="150" autofocus required id="id_username">
+                                <small class="my-5">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="col">
+                                <label for="id_email">Email:</label>
+                                <input type="email" name="email" class="form-control friendly-input" placeholder="Email" required id="id_email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <label for="id_password1">Password:</label>
+                                <input type="password" name="password1" autocomplete="new-password" class="form-control friendly-input" placeholder="Password" required id="id_password1">
+                                <small><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <label for="id_password2">Password confirmation:</label>
+                                <input type="password" name="password2" autocomplete="new-password" class="form-control friendly-input" placeholder="Confirm Password" required id="id_password2">
+                                <small>Enter the same password as before, for verification.</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn custom-btn friendly-btn mb-1" href="index.html">Sign Up</a>
+                        </div>
+                    </form>
                     <div class="border-top pt-3">
                         <small class="text-muted">
-                            <a href="login.html">Log In Again</a>
+                            Already have an account? <a class="ml-2" href="login.html">Sign In</a>
                         </small>
                     </div>
                 </div>
